@@ -1,0 +1,10 @@
+[Unit]
+Description= Turns the fan on and off to keep the temp between 50 and 60
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/fan_controller/fan_controller.py
+User=root
+
+[Install]
+WantedBy=multi-user.target
